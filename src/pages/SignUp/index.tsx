@@ -84,6 +84,12 @@ const SignUp = () => {
             <span aria-label="signUp-button-text">Sign Up</span>
           )}
         </button>
+        <button
+          className={styles.listButton}
+          onClick={() => navigate(Routes.list)}
+        >
+          List
+        </button>
       </div>
     </div>
   );

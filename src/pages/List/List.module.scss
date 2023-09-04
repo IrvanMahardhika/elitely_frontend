@@ -26,6 +26,7 @@
 
     .userListWrapper {
       .userCard {
+        position: relative;
         height: 100px;
         width: 40%;
         margin: 5px;
@@ -33,6 +34,14 @@
         border: 1px solid #cdcd;
         border-radius: 10px;
         float: left;
+        text-align: left;
+
+        .deleteButton {
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+          cursor: pointer;
+        }
       }
     }
   }
