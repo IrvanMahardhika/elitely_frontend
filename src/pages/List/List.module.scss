@@ -1,0 +1,39 @@
+.mainContainer {
+  height: 100vh;
+  padding: 25px;
+  display: flex;
+
+  .spinnerWrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .loader {
+      color: var(--white);
+    }
+  }
+
+  .listWrapper {
+    flex: 1;
+
+    .headerText {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 50px;
+    }
+
+    .userListWrapper {
+      .userCard {
+        height: 100px;
+        width: 40%;
+        margin: 5px;
+        padding: 10px;
+        border: 1px solid #cdcd;
+        border-radius: 10px;
+        float: left;
+      }
+    }
+  }
+}
