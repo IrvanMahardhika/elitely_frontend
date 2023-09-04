@@ -3,9 +3,9 @@ import { CircularProgress } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { Method } from 'axios';
 
-import request from 'utils/request';
+import request from '../../utils/request';
 
-import { GetUserListResponse, User } from 'types/user';
+import { GetUserListResponse, User } from '../../types/user';
 
 import styles from './List.module.scss';
 
@@ -70,11 +70,17 @@ const List = () => {
         </div>
       ) : (
         <div className={styles.listWrapper}>
-          <div className={styles.headerText}>List page</div>
+          <div aria-label="page-title" className={styles.headerText}>
+            List page
+          </div>
           <div className={styles.userListWrapper}>
             {userList.map((u: User) => {
               return (
-                <div key={u.id.toString()} className={styles.userCard}>
+                <div
+                  key={u.id.toString()}
+                  aria-label="user-card"
+                  className={styles.userCard}
+                >
                   <div>
                     {u.first_name} {u.last_name}
                   </div>

@@ -57,6 +57,7 @@ const SignUp = () => {
           onChange={(e) => setFirstName(e.target.value)}
         />
         <input
+          aria-label="input-last-name"
           type="text"
           placeholder="Last name"
           className={styles.inputField}
@@ -64,12 +65,14 @@ const SignUp = () => {
           onChange={(e) => setLastName(e.target.value)}
         />
         <textarea
+          aria-label="input-address"
           placeholder="Address"
           className={styles.textAreaField}
           value={address}
           onChange={(e) => setAddress(e.target.value)}
         />
         <button
+          aria-label="signUp-button"
           className={styles.signUpButton}
           disabled={isSignUpButtonDisabled}
           onClick={handleSignUp}
