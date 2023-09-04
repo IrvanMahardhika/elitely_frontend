@@ -3,9 +3,9 @@ import { CircularProgress } from '@mui/material';
 import { Method } from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-import { Routes } from 'constants/routes';
+import { Routes } from '../../constants/routes';
 
-import request from 'utils/request';
+import request from '../../utils/request';
 
 import styles from './SignUp.module.scss';
 
@@ -49,6 +49,7 @@ const SignUp = () => {
       <div className={styles.headerText}>Sign Up page</div>
       <div className={styles.body}>
         <input
+          aria-label="input-first-name"
           type="text"
           placeholder="First name"
           className={styles.inputField}
@@ -80,7 +81,7 @@ const SignUp = () => {
               className={styles.loader}
             />
           ) : (
-            <span>Sign Up</span>
+            <span aria-label="signUp-button-text">Sign Up</span>
           )}
         </button>
       </div>
